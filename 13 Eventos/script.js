@@ -83,32 +83,32 @@ linksInternos.forEach(link => {
 
 // Selecione todos os elementos do site começando a partir do body,
 // ao clique mostre exatamente quais elementos estão sendo clicados
-// const corpo = document.body
+const corpo = document.body
 
-// function handleFilhoCorpo(e) {
-//   console.log(e.target)
-// }
+function handleFilhoCorpo(e) {
+  console.log(e.target)
+}
+function handleCorpo(event) {
+  const filho = this.children
+  for (i = 1; i < this.children.length; i++) {
+    filho[i].addEventListener('click', handleFilhoCorpo)
+  }
+}
 
-// function handleCorpo(event) {
-//   this.childNodes.forEach(item => {
-//     item.addEventListener('click', handleFilhoCorpo)
-//   })
-// }
-
-// corpo.addEventListener('click', handleCorpo)
+corpo.addEventListener('click', handleCorpo)
 
 //Versão do professor como o * no css se refere a todos elementos é só usar
 // ele no query selector
 
-const allSiteItems = document.querySelectorAll('body *')
+// const allSiteItems = document.querySelectorAll('body *')
 
-function handleElemento(event) {
-  console.log(this)
-}
+// function handleElemento(event) {
+//   console.log(this)
+// }
 
-allSiteItems.forEach(elemento => {
-  elemento.addEventListener('click', handleElemento)
-})
+// allSiteItems.forEach(elemento => {
+//   elemento.addEventListener('click', handleElemento)
+// })
 
 // Utilizando o código anterior, ao invés de mostrar no console,
 // remova o elemento que está sendo clicado, o método remove() remove um elemento
