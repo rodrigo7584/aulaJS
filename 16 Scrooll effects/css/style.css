@@ -28,14 +28,14 @@ body {
   /*1 fr significa 1 fracao do que sobrar*/
   grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
 }
-.js .js-scroll{
+.js .js-scroll {
   opacity: 0;
-  transform: translate3d(-30px,0,0);
-  transition: .3s;
+  transform: translate3d(-30px, 0, 0);
+  transition: 0.3s;
 }
-.js .js-scroll.animar{
+.js .js-scroll.animar {
   opacity: 1;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
 .menu {
   /*aqui diz q o menu ira da 3 linha 3 da coluna ate a 5 */
