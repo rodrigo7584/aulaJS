@@ -53,3 +53,50 @@ console.log(listaArray2)
 // existe outro metodo interessante que é de Object ele retorna
 // todas propriedades de um Objeto
 console.log(Object.getOwnPropertyNames(listaArray))
+
+console.log('EXERCICIOS')
+// Crie uma função construtora de Pessoas
+// Deve conter nome, sobrenome e idade
+// Crie um método no protótipo que retorne
+// o nome completo da pessoa
+
+function PessoaConstrutor(nome, sobrenome, idade) {
+  this.nome = nome
+  this.sobrenome = sobrenome
+  this.idade = idade
+}
+
+const pessoa = new PessoaConstrutor('luciana', 'oliveira', '58')
+
+PessoaConstrutor.prototype.nomecompleto = function () {
+  return `${this.nome} ${this.sobrenome}`
+}
+console.log(pessoa.nomecompleto())
+// Liste os métodos acessados por
+// dados criados com NodeList,
+// HTMLCollection, Document
+console.log(NodeList.prototype)
+console.log(HTMLAllCollection.prototype)
+console.log(Document.prototype)
+// Liste os construtores dos dados abaixo
+const li = document.querySelector('li')
+
+li
+li.click
+li.innerText
+li.value
+li.hidden
+li.offsetLeft
+li.click()
+
+console.log(li.constructor.name)
+console.log(li.click.constructor.name)
+console.log(li.innerText.constructor.name)
+console.log(li.value.constructor.name)
+console.log(li.hidden.constructor.name)
+console.log(li.offsetLeft.constructor.name)
+console.log(li.click.constructor.name)
+
+// Qual o construtor do dado abaixo:
+li.hidden.constructor.name
+console.log(li.hidden.constructor.name.constructor.name)
